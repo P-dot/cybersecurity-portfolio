@@ -1,0 +1,21 @@
+# Raw evidence and temporary files
+*.zip
+*.pcap
+*.log
+*.tmp
+*.bak
+
+# Sensitive or private material
+*.key
+*.pem
+*.pfx
+*.kdbx
+*.env
+id_rsa*
+*.ppk
+
+# Raw screenshots - upload only selected sanitized images if needed
+raw/
+raw-evidence/
+private/
+secrets/
