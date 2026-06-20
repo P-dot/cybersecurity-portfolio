@@ -1,44 +1,128 @@
-# Cybersecurity Operations Portfolio
+\# Cybersecurity Operations Portfolio
 
-Portfolio técnico en construcción orientado a ciberseguridad operativa, SOC L1, administración segura de sistemas, análisis de red y documentación de evidencias en entornos controlados.
 
-## Objetivo
 
-Este repositorio documenta prácticas defensivas realizadas en laboratorio propio y autorizado, con foco en:
+Portfolio técnico orientado a ciberseguridad operativa, SOC L1 y defensa básica de sistemas y red.
 
-- revisión básica de seguridad en Linux
-- análisis de permisos, servicios, puertos y logs
-- validación de conectividad en red interna
-- reconocimiento autorizado de servicios
-- interpretación de superficie de exposición
-- redacción de recomendaciones defensivas
 
-## Alcance ético
 
-Todo el contenido se realiza exclusivamente en entornos propios, máquinas de laboratorio, redes internas o sistemas expresamente autorizados.
+Este repositorio documenta laboratorios realizados en un entorno controlado y autorizado, con foco en observación, análisis, documentación de evidencias e interpretación prudente de hallazgos.
 
-No se realizan pruebas sobre sistemas de terceros.
 
-## Laboratorios documentados
 
-### 01 — Linux Security Baseline
+\## Perfil objetivo
 
-Revisión básica de seguridad en un sistema Linux: usuarios, grupos, privilegios sudo, permisos sensibles, servicios, puertos, firewall UFW y logs de autenticación.
 
-### 02 — Network Services Reconnaissance Authorized
 
-Validación de conectividad y reconocimiento autorizado de servicios en red interna de laboratorio, diferenciando conectividad, exposición y superficie de ataque.
+El portfolio está orientado a posiciones como:
 
-## Perfil profesional relacionado
 
-Este portfolio apoya una transición profesional hacia funciones de:
 
-- Operador de Seguridad
-- SOC L1
-- Técnico de Ciberseguridad Junior
-- Operaciones de Seguridad
-- Soporte de seguridad e infraestructuras
+\* Operador de Seguridad
 
-## Estado
+\* SOC L1
 
-Repositorio en construcción. La documentación se irá refinando conforme se completen nuevos laboratorios.
+\* Técnico SOC Junior
+
+\* Técnico de Ciberseguridad Junior
+
+\* Operador de Sistemas con orientación a seguridad
+
+\* SecOps Junior
+
+
+
+\## Enfoque
+
+
+
+El objetivo no es mostrar explotación ni actividad ofensiva, sino construir criterio operativo defensivo:
+
+
+
+\* observar evidencias técnicas,
+
+\* clasificar comportamiento esperado o anómalo,
+
+\* identificar exposición básica,
+
+\* documentar hallazgos,
+
+\* proponer recomendaciones prudentes,
+
+\* escalar cuando procede.
+
+
+
+\## Laboratorios documentados
+
+
+
+| Lab                                    | Área             | Competencias trabajadas                                                                                           |
+
+| -------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
+
+| 01 — Linux Security Baseline           | Sistemas Linux   | Revisión básica de usuarios, permisos, servicios, logs y estado defensivo del sistema                             |
+
+| 02 — Network Services Recon Authorized | Red y exposición | Identificación de activos, conectividad, servicios accesibles y superficie de exposición en entorno autorizado    |
+
+| 03 — Windows Security Baseline         | Sistemas Windows | Revisión de usuarios locales, privilegios, servicios, firewall, Microsoft Defender, eventos y procesos            |
+
+| 04 — Network Traffic Analysis          | Tráfico de red   | Captura, filtrado e interpretación inicial de tráfico ICMP y HTTP con herramientas de terminal y Wireshark/tshark |
+
+
+
+\## Herramientas y tecnologías
+
+
+
+\* Linux
+
+\* Windows
+
+\* pfSense
+
+\* Kali Linux
+
+\* Metasploitable
+
+\* Nmap
+
+\* tcpdump
+
+\* tshark
+
+\* Wireshark
+
+\* PowerShell
+
+\* Bash
+
+\* Git/GitHub
+
+
+
+\## Principios de trabajo
+
+
+
+\* Entorno controlado y autorizado.
+
+\* Documentación técnica clara.
+
+\* Separación entre evidencia, interpretación y recomendación.
+
+\* No inclusión de credenciales, datos sensibles ni información de terceros.
+
+\* Enfoque defensivo y operativo.
+
+
+
+\## Estado
+
+
+
+Portfolio en evolución, orientado a reforzar competencias prácticas para ciberseguridad operativa y SOC L1.
+
+
+
