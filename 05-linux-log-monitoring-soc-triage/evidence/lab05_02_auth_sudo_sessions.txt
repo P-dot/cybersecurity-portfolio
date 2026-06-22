@@ -1,0 +1,316 @@
+====================================
+LAB 05 - MISSION 5.2 - AUTHENTICATION, SESSIONS AND SUDO
+Date:
+Sun Jun 21 10:59:35 AM UTC 2026
+====================================
+
+### Host identity
+ Static hostname: vbox
+       Icon name: computer-vm
+         Chassis: vm
+      Machine ID: 796051be05384e259f396af192a5f440
+         Boot ID: 73aebcd5685d44d59796770dd1dbdeac
+  Virtualization: oracle
+Operating System: Ubuntu 22.04.5 LTS
+          Kernel: Linux 5.15.0-177-generic
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+
+vbox
+uid=1000(vbox) gid=1000(vbox) groups=1000(vbox),27(sudo),999(vboxsf)
+
+### Recent login sessions - last
+vbox     tty1                          Sun Jun 21 10:32   still logged in
+reboot   system boot  5.15.0-177-gener Sun Jun 21 10:31   still running
+vbox     tty1                          Thu Jun 18 15:45 - down  (2+18:41)
+reboot   system boot  5.15.0-177-gener Thu Jun 18 15:40 - 10:26 (2+18:45)
+vbox     tty1                          Tue May 26 16:50 - down   (01:04)
+reboot   system boot  5.15.0-177-gener Tue May 26 16:47 - 17:55  (01:07)
+vbox     tty1                          Mon May 25 08:26 - down   (10:07)
+reboot   system boot  5.15.0-177-gener Mon May 25 08:22 - 18:33  (10:11)
+vbox     tty1                          Tue May 19 13:58 - down  (4+02:57)
+reboot   system boot  5.15.0-177-gener Tue May 19 13:53 - 16:56 (4+03:03)
+vbox     tty1                          Mon May 18 20:09 - crash  (17:43)
+reboot   system boot  5.15.0-177-gener Mon May 18 20:07 - 16:56 (4+20:49)
+vbox     tty1                          Fri Mar 13 09:52 - crash (66+10:14)
+reboot   system boot  5.15.0-171-gener Fri Mar 13 09:52 - 16:56 (71+07:04)
+
+wtmp begins Fri Mar 13 09:52:00 2026
+
+### Last login per user - lastlog
+Username         Port     From             Latest
+root                                       **Never logged in**
+daemon                                     **Never logged in**
+bin                                        **Never logged in**
+sys                                        **Never logged in**
+sync                                       **Never logged in**
+games                                      **Never logged in**
+man                                        **Never logged in**
+lp                                         **Never logged in**
+mail                                       **Never logged in**
+news                                       **Never logged in**
+uucp                                       **Never logged in**
+proxy                                      **Never logged in**
+www-data                                   **Never logged in**
+backup                                     **Never logged in**
+list                                       **Never logged in**
+irc                                        **Never logged in**
+gnats                                      **Never logged in**
+nobody                                     **Never logged in**
+_apt                                       **Never logged in**
+systemd-network                            **Never logged in**
+systemd-resolve                            **Never logged in**
+messagebus                                 **Never logged in**
+systemd-timesync                           **Never logged in**
+pollinate                                  **Never logged in**
+syslog                                     **Never logged in**
+uuidd                                      **Never logged in**
+tcpdump                                    **Never logged in**
+tss                                        **Never logged in**
+landscape                                  **Never logged in**
+fwupd-refresh                              **Never logged in**
+usbmux                                     **Never logged in**
+vboxadd                                    **Never logged in**
+vbox             tty1                      Sun Jun 21 10:32:00 +0000 2026
+lxd                                        **Never logged in**
+ftp                                        **Never logged in**
+
+### Current logged users - who
+vbox     tty1         2026-06-21 10:32
+
+### Recent authentication log entries - auth.log tail
+Jun 19 10:17:02 vbox CRON[1315]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jun 19 10:17:02 vbox CRON[1315]: pam_unix(cron:session): session closed for user root
+Jun 20 14:17:01 vbox CRON[1507]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jun 20 14:17:01 vbox CRON[1507]: pam_unix(cron:session): session closed for user root
+Jun 20 15:17:01 vbox CRON[1534]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jun 20 15:17:01 vbox CRON[1534]: pam_unix(cron:session): session closed for user root
+Jun 21 09:17:01 vbox CRON[1617]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jun 21 09:17:01 vbox CRON[1617]: pam_unix(cron:session): session closed for user root
+Jun 21 09:39:37 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/journalctl --list-boots
+Jun 21 09:39:37 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 09:39:37 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 09:39:37 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/auth.log
+Jun 21 09:39:37 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 09:39:37 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 09:39:37 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/syslog
+Jun 21 09:39:37 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 09:39:37 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:02:37 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/journalctl --list-boots
+Jun 21 10:02:37 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:02:37 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:02:37 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/auth.log
+Jun 21 10:02:38 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:02:38 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:02:38 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/syslog
+Jun 21 10:02:38 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:02:38 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:10:55 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/cp /home/vbox/lab05/evidencias/lab05_01_log_sources.txt /mnt/capturas/
+Jun 21 10:10:55 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:10:55 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:17:01 vbox CRON[1721]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jun 21 10:17:01 vbox CRON[1721]: pam_unix(cron:session): session closed for user root
+Jun 21 10:18:47 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mkdir -p /mnt/capturas
+Jun 21 10:18:47 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:18:47 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:19:49 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/capturas
+Jun 21 10:19:49 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:19:49 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:20:12 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/05_capturas
+Jun 21 10:20:12 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:20:12 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:20:33 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/capturas
+Jun 21 10:20:33 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:20:33 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:21:31 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mkdir -p /mnt/capturas
+Jun 21 10:21:31 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:21:31 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:21:46 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/capturas
+Jun 21 10:21:46 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:21:47 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:23:25 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mkdir -p /mnt/capturas
+Jun 21 10:23:25 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:23:25 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:23:35 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/capturas
+Jun 21 10:23:35 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:23:35 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:25:55 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/VBoxControl sharedfolder list
+Jun 21 10:25:55 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:25:55 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:26:22 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/sbin/shutdown now
+Jun 21 10:26:22 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:26:22 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:31:29 vbox systemd-logind[685]: New seat seat0.
+Jun 21 10:31:29 vbox systemd-logind[685]: Watching system buttons on /dev/input/event0 (Power Button)
+Jun 21 10:31:29 vbox systemd-logind[685]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Jun 21 10:31:29 vbox systemd-logind[685]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Jun 21 10:31:46 vbox login[702]: pam_unix(login:auth): check pass; user unknown
+Jun 21 10:31:46 vbox login[702]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost= 
+Jun 21 10:31:49 vbox login[702]: FAILED LOGIN (1) on '/dev/tty1' FOR 'UNKNOWN', Authentication failure
+Jun 21 10:32:00 vbox login[702]: pam_unix(login:session): session opened for user vbox(uid=1000) by LOGIN(uid=0)
+Jun 21 10:32:00 vbox systemd-logind[685]: New session 1 of user vbox.
+Jun 21 10:32:00 vbox systemd: pam_unix(systemd-user:session): session opened for user vbox(uid=1000) by (uid=0)
+Jun 21 10:59:45 vbox sudo: pam_unix(sudo:auth): authentication failure; logname=vbox uid=1000 euid=0 tty=/dev/tty1 ruser=vbox rhost=  user=vbox
+Jun 21 10:59:50 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 80 /var/log/auth.log
+Jun 21 10:59:50 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+
+### Sudo events from auth.log
+Jun 21 09:39:37 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/journalctl --list-boots
+Jun 21 09:39:37 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 09:39:37 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 09:39:37 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/auth.log
+Jun 21 09:39:37 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 09:39:37 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 09:39:37 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/syslog
+Jun 21 09:39:37 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 09:39:37 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:02:37 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/journalctl --list-boots
+Jun 21 10:02:37 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:02:37 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:02:37 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/auth.log
+Jun 21 10:02:38 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:02:38 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:02:38 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/syslog
+Jun 21 10:02:38 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:02:38 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:10:55 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/cp /home/vbox/lab05/evidencias/lab05_01_log_sources.txt /mnt/capturas/
+Jun 21 10:10:55 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:10:55 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:18:47 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mkdir -p /mnt/capturas
+Jun 21 10:18:47 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:18:47 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:19:49 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/capturas
+Jun 21 10:19:49 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:19:49 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:20:12 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/05_capturas
+Jun 21 10:20:12 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:20:12 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:20:33 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/capturas
+Jun 21 10:20:33 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:20:33 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:21:31 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mkdir -p /mnt/capturas
+Jun 21 10:21:31 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:21:31 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:21:46 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/capturas
+Jun 21 10:21:46 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:21:47 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:23:25 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mkdir -p /mnt/capturas
+Jun 21 10:23:25 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:23:25 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:23:35 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/capturas
+Jun 21 10:23:35 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:23:35 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:25:55 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/VBoxControl sharedfolder list
+Jun 21 10:25:55 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:25:55 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:26:22 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/sbin/shutdown now
+Jun 21 10:26:22 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:26:22 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:59:45 vbox sudo: pam_unix(sudo:auth): authentication failure; logname=vbox uid=1000 euid=0 tty=/dev/tty1 ruser=vbox rhost=  user=vbox
+Jun 21 10:59:50 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 80 /var/log/auth.log
+Jun 21 10:59:50 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:59:50 vbox sudo: pam_unix(sudo:session): session closed for user root
+Jun 21 10:59:58 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/grep -i sudo /var/log/auth.log
+Jun 21 10:59:58 vbox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+
+### Authentication failures from auth.log
+Jun 21 10:31:46 vbox login[702]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost= 
+Jun 21 10:31:49 vbox login[702]: FAILED LOGIN (1) on '/dev/tty1' FOR 'UNKNOWN', Authentication failure
+Jun 21 10:59:45 vbox sudo: pam_unix(sudo:auth): authentication failure; logname=vbox uid=1000 euid=0 tty=/dev/tty1 ruser=vbox rhost=  user=vbox
+Jun 21 11:00:01 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/grep -Ei 'failed|failure|incorrect|invalid|authentication failure' /var/log/auth.log
+
+### Sudo events from journalctl
+May 23 15:50:01 vbox sudo[3019]: pam_unix(sudo:session): session closed for user root
+May 23 15:50:26 vbox sudo[3023]:     vbox : TTY=tty1 ; PWD=/home/vbox/evidencias_lab01 ; USER=root ; COMMAND=/usr/bin/journalctl _COMM=sudo -n 50 --no-pager
+May 23 15:50:26 vbox sudo[3023]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+May 23 15:50:26 vbox sudo[3023]: pam_unix(sudo:session): session closed for user root
+May 23 15:52:21 vbox sudo[3026]:     vbox : TTY=tty1 ; PWD=/home/vbox/evidencias_lab01 ; USER=root ; COMMAND=/usr/bin/grep sudo /var/log/auth.log
+May 23 15:52:21 vbox sudo[3026]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+May 23 15:52:21 vbox sudo[3026]: pam_unix(sudo:session): session closed for user root
+May 23 16:56:47 vbox sudo[3063]:     vbox : TTY=tty1 ; PWD=/home/vbox/evidencias_lab01 ; USER=root ; COMMAND=/usr/sbin/shutdown now
+May 23 16:56:47 vbox sudo[3063]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+May 23 16:56:47 vbox sudo[3063]: pam_unix(sudo:session): session closed for user root
+-- Boot 53b1ce143e504cf98efa99e3bb6c4bae --
+May 25 18:33:39 vbox sudo[1291]:     vbox : TTY=tty1 ; PWD=/home/vbox ; USER=root ; COMMAND=/usr/sbin/shutdown now
+May 25 18:33:39 vbox sudo[1291]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+May 25 18:33:39 vbox sudo[1291]: pam_unix(sudo:session): session closed for user root
+-- Boot 158d0189b50c45ada3a4f060e9e57729 --
+May 26 17:54:53 vbox sudo[1292]: pam_unix(sudo:auth): authentication failure; logname=vbox uid=1000 euid=0 tty=/dev/tty1 ruser=vbox rhost=  user=vbox
+May 26 17:54:58 vbox sudo[1292]:     vbox : TTY=tty1 ; PWD=/home/vbox ; USER=root ; COMMAND=/usr/sbin/shutdown now
+May 26 17:54:58 vbox sudo[1292]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+May 26 17:54:58 vbox sudo[1292]: pam_unix(sudo:session): session closed for user root
+-- Boot 414ddf422c0f458ea2dd8df5dce41237 --
+Jun 21 09:39:37 vbox sudo[1653]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/journalctl --list-boots
+Jun 21 09:39:37 vbox sudo[1653]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 09:39:37 vbox sudo[1653]: pam_unix(sudo:session): session closed for user root
+Jun 21 09:39:37 vbox sudo[1657]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/auth.log
+Jun 21 09:39:37 vbox sudo[1657]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 09:39:37 vbox sudo[1657]: pam_unix(sudo:session): session closed for user root
+Jun 21 09:39:37 vbox sudo[1660]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/syslog
+Jun 21 09:39:37 vbox sudo[1660]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 09:39:37 vbox sudo[1660]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:02:37 vbox sudo[1694]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/journalctl --list-boots
+Jun 21 10:02:37 vbox sudo[1694]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:02:37 vbox sudo[1694]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:02:37 vbox sudo[1698]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/auth.log
+Jun 21 10:02:37 vbox sudo[1698]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:02:38 vbox sudo[1698]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:02:38 vbox sudo[1701]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/syslog
+Jun 21 10:02:38 vbox sudo[1701]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:02:38 vbox sudo[1701]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:10:55 vbox sudo[1715]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/cp /home/vbox/lab05/evidencias/lab05_01_log_sources.txt /mnt/capturas/
+Jun 21 10:10:55 vbox sudo[1715]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:10:55 vbox sudo[1715]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:18:47 vbox sudo[1726]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mkdir -p /mnt/capturas
+Jun 21 10:18:47 vbox sudo[1726]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:18:47 vbox sudo[1726]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:19:49 vbox sudo[1729]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/capturas
+Jun 21 10:19:49 vbox sudo[1729]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:19:49 vbox sudo[1729]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:20:12 vbox sudo[1735]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/05_capturas
+Jun 21 10:20:12 vbox sudo[1735]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:20:12 vbox sudo[1735]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:20:33 vbox sudo[1739]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/capturas
+Jun 21 10:20:33 vbox sudo[1739]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:20:33 vbox sudo[1739]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:21:31 vbox sudo[1743]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mkdir -p /mnt/capturas
+Jun 21 10:21:31 vbox sudo[1743]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:21:31 vbox sudo[1743]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:21:46 vbox sudo[1747]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/capturas
+Jun 21 10:21:46 vbox sudo[1747]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:21:47 vbox sudo[1747]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:23:25 vbox sudo[1753]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mkdir -p /mnt/capturas
+Jun 21 10:23:25 vbox sudo[1753]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:23:25 vbox sudo[1753]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:23:35 vbox sudo[1756]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/mount -t vboxsf Capturas /mnt/capturas
+Jun 21 10:23:35 vbox sudo[1756]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:23:35 vbox sudo[1756]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:25:55 vbox sudo[1762]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/VBoxControl sharedfolder list
+Jun 21 10:25:55 vbox sudo[1762]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:25:55 vbox sudo[1762]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:26:22 vbox sudo[1767]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/sbin/shutdown now
+Jun 21 10:26:22 vbox sudo[1767]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:26:22 vbox sudo[1767]: pam_unix(sudo:session): session closed for user root
+-- Boot 73aebcd5685d44d59796770dd1dbdeac --
+Jun 21 10:59:45 vbox sudo[1218]: pam_unix(sudo:auth): authentication failure; logname=vbox uid=1000 euid=0 tty=/dev/tty1 ruser=vbox rhost=  user=vbox
+Jun 21 10:59:50 vbox sudo[1218]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/tail -n 80 /var/log/auth.log
+Jun 21 10:59:50 vbox sudo[1218]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:59:50 vbox sudo[1218]: pam_unix(sudo:session): session closed for user root
+Jun 21 10:59:58 vbox sudo[1221]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/grep -i sudo /var/log/auth.log
+Jun 21 10:59:58 vbox sudo[1221]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 10:59:58 vbox sudo[1221]: pam_unix(sudo:session): session closed for user root
+Jun 21 11:00:01 vbox sudo[1226]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/grep -Ei 'failed|failure|incorrect|invalid|authentication failure' /var/log/auth.log
+Jun 21 11:00:01 vbox sudo[1226]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+Jun 21 11:00:01 vbox sudo[1226]: pam_unix(sudo:session): session closed for user root
+Jun 21 11:00:01 vbox sudo[1230]:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/journalctl _COMM=sudo -n 80 --no-pager
+Jun 21 11:00:01 vbox sudo[1230]: pam_unix(sudo:session): session opened for user root(uid=0) by vbox(uid=1000)
+
+### SSH service status
+
+### SSH authentication events, if any
+Jun 21 11:00:01 vbox sudo:     vbox : TTY=tty1 ; PWD=/home/vbox/lab05 ; USER=root ; COMMAND=/usr/bin/grep -Ei sshd|ssh /var/log/auth.log
+
+====================================
+END OF MISSION 5.2
+====================================

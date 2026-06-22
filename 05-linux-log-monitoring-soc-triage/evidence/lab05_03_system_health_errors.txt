@@ -1,0 +1,352 @@
+====================================
+LAB 05 - MISSION 5.3 - SYSTEM ERRORS, WARNINGS AND FAILED SERVICES
+Date:
+Sun Jun 21 07:40:40 PM UTC 2026
+====================================
+
+### Host identity
+ Static hostname: vbox
+       Icon name: computer-vm
+         Chassis: vm
+      Machine ID: 796051be05384e259f396af192a5f440
+         Boot ID: 73aebcd5685d44d59796770dd1dbdeac
+  Virtualization: oracle
+Operating System: Ubuntu 22.04.5 LTS
+          Kernel: Linux 5.15.0-177-generic
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+
+### Current boot ID and uptime
+Boot ID: 73aebcd5-685d-44d5-9796-770dd1dbdeac
+ 19:40:40 up  2:59,  1 user,  load average: 0.00, 0.00, 0.00
+
+### Failed systemd services
+  UNIT                  LOAD   ACTIVE SUB    DESCRIPTION
+● fwupd-refresh.service loaded failed failed Refresh fwupd metadata and update motd
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+1 loaded units listed.
+
+### Failed service units only
+  UNIT                  LOAD   ACTIVE SUB    DESCRIPTION
+● fwupd-refresh.service loaded failed failed Refresh fwupd metadata and update motd
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+1 loaded units listed.
+
+### Recent warnings from systemd journal
+Jun 18 15:43:25 vbox systemd-resolved[606]: Using degraded feature set TCP instead of UDP for DNS server 192.168.1.1.
+Jun 18 16:13:50 vbox systemd-resolved[606]: Using degraded feature set UDP instead of UDP+EDNS0 for DNS server 192.168.1.1.
+Jun 18 16:35:22 vbox kernel: 16:35:22.327499 control  Session 0 is about to close ...
+Jun 18 16:35:22 vbox kernel: 16:35:22.354370 control  Stopping all guest processes ...
+Jun 18 16:35:22 vbox kernel: 16:35:22.354653 control  Closing all guest files ...
+Jun 18 16:35:22 vbox kernel: 16:35:22.355863 control  vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+Jun 19 09:48:47 vbox kernel: 09:48:47.825331 timesync vgsvcTimeSyncWorker: Radical host time change: 62 006 623 000 000ns (HostNow=1 781 862 527 807 000 000 ns HostLast=1 781 800 521 184 000 000 ns)
+Jun 19 09:48:57 vbox kernel: 09:48:57.829235 timesync vgsvcTimeSyncWorker: Radical guest time change: 62 007 277 670 000ns (GuestNow=1 781 862 537 829 191 000 ns GuestLast=1 781 800 530 551 521 000 ns fSetTimeLastLoop=true)
+Jun 19 10:20:38 vbox systemd[1]: fwupd-refresh.service: Failed with result 'exit-code'.
+Jun 19 10:20:38 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+Jun 19 10:51:59 vbox kernel: 10:51:59.462218 control  Session 0 is about to close ...
+Jun 19 10:51:59 vbox kernel: 10:51:59.547372 control  Stopping all guest processes ...
+Jun 19 10:51:59 vbox kernel: 10:51:59.719205 control  Closing all guest files ...
+Jun 19 10:51:59 vbox kernel: 10:51:59.720058 control  vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+Jun 20 13:52:15 vbox kernel: 13:52:15.319874 timesync vgsvcTimeSyncWorker: Radical host time change: 97 216 545 000 000ns (HostNow=1 781 963 535 303 000 000 ns HostLast=1 781 866 318 758 000 000 ns)
+Jun 20 13:52:25 vbox kernel: 13:52:25.322917 timesync vgsvcTimeSyncWorker: Radical guest time change: 97 216 598 590 000ns (GuestNow=1 781 963 545 322 845 000 ns GuestLast=1 781 866 328 724 255 000 ns fSetTimeLastLoop=true)
+Jun 20 14:52:42 vbox systemd[1]: fwupd-refresh.service: Failed with result 'exit-code'.
+Jun 20 14:52:42 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+Jun 20 16:06:11 vbox kernel: 16:06:11.069093 control  Session 0 is about to close ...
+Jun 20 16:06:11 vbox kernel: 16:06:11.149128 control  Stopping all guest processes ...
+Jun 20 16:06:11 vbox kernel: 16:06:11.149825 control  Closing all guest files ...
+Jun 20 16:06:11 vbox kernel: 16:06:11.225163 control  vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+Jun 21 08:31:34 vbox kernel: 08:31:34.246882 timesync vgsvcTimeSyncWorker: Radical host time change: 59 126 893 000 000ns (HostNow=1 782 030 694 232 000 000 ns HostLast=1 781 971 567 339 000 000 ns)
+Jun 21 08:31:44 vbox kernel: 08:31:44.258613 timesync vgsvcTimeSyncWorker: Radical guest time change: 59 126 951 500 000ns (GuestNow=1 782 030 704 258 573 000 ns GuestLast=1 781 971 577 307 073 000 ns fSetTimeLastLoop=true)
+Jun 21 10:19:49 vbox kernel: vboxsf: g_fHostFeatures=0x8000000f g_fSfFeatures=0x1 g_uSfLastFunction=29
+Jun 21 10:19:49 vbox kernel: vboxsf: Successfully loaded version 7.1.10 r169112 on 5.15.0-177-generic (LINUX_VERSION_CODE=0x50fc7)
+Jun 21 10:19:49 vbox kernel: vboxsf: SHFL_FN_MAP_FOLDER failed for 'Capturas': share not found
+Jun 21 10:20:33 vbox kernel: vboxsf: SHFL_FN_MAP_FOLDER failed for 'Capturas': share not found
+Jun 21 10:21:47 vbox kernel: vboxsf: SHFL_FN_MAP_FOLDER failed for 'Capturas': share not found
+Jun 21 10:23:35 vbox kernel: vboxsf: SHFL_FN_MAP_FOLDER failed for 'Capturas': share not found
+Jun 21 10:26:23 vbox kernel: 10:26:23.363961 control  Guest control service stopped
+Jun 21 10:26:23 vbox kernel: 10:26:23.405773 control  Guest control worker returned with rc=VINF_TRY_AGAIN
+Jun 21 10:26:23 vbox kernel: 10:26:23.406075 main     Session 0 is about to close ...
+Jun 21 10:26:23 vbox kernel: 10:26:23.406157 main     Stopping all guest processes ...
+Jun 21 10:26:23 vbox kernel: 10:26:23.406229 main     Closing all guest files ...
+Jun 21 10:26:23 vbox kernel: 10:26:23.465910 main     Ended.
+-- Boot 73aebcd5685d44d59796770dd1dbdeac --
+Jun 21 10:31:19 vbox kernel: RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+Jun 21 10:31:19 vbox kernel: APIC calibration not consistent with PM-Timer: 116ms instead of 100ms
+Jun 21 10:31:19 vbox kernel: acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+Jun 21 10:31:19 vbox kernel: device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+Jun 21 10:31:19 vbox kernel: [drm:vmw_host_printf [vmwgfx]] *ERROR* Failed to send host log message.
+Jun 21 10:31:19 vbox systemd[1]: Configuration file /run/systemd/system/netplan-ovs-cleanup.service is marked world-inaccessible. This has no effect as configuration data is accessible via APIs without restrictions. Proceeding anyway.
+Jun 21 10:31:19 vbox systemd[1]: /lib/systemd/system/snapd.service:23: Unknown key name 'RestartMode' in section 'Service', ignoring.
+Jun 21 10:31:24 vbox kernel: vboxguest: loading out-of-tree module taints kernel.
+Jun 21 10:31:24 vbox kernel: vgdrvHeartbeatInit: Setting up heartbeat to trigger every 2000 milliseconds
+Jun 21 10:31:24 vbox kernel: Host supports full mouse state reporting, switching to extended mouse integration protocol
+Jun 21 10:31:24 vbox kernel: vboxguest: Successfully loaded version 7.1.10 r169112
+Jun 21 10:31:24 vbox kernel: vboxguest: misc device minor 123, IRQ 20, I/O port d040, MMIO at 00000000f0400000 (size 0x400000)
+Jun 21 10:31:25 vbox systemd-udevd[451]: vboxguest: /etc/udev/rules.d/60-vboxadd.rules:1 Only network interfaces can be renamed, ignoring NAME="vboxguest".
+Jun 21 10:31:25 vbox systemd-udevd[472]: vboxuser: /etc/udev/rules.d/60-vboxadd.rules:2 Only network interfaces can be renamed, ignoring NAME="vboxuser".
+Jun 21 10:31:28 vbox /usr/sbin/irqbalance[678]: Balancing is ineffective on systems with a single cpu.  Shutting down
+Jun 21 10:31:29 vbox udisksd[687]: failed to load module mdraid: libbd_mdraid.so.2: cannot open shared object file: No such file or directory
+Jun 21 10:31:29 vbox udisksd[687]: Failed to load the 'mdraid' libblockdev plugin
+Jun 21 10:31:33 vbox kernel: kauditd_printk_skb: 29 callbacks suppressed
+Jun 21 10:31:35 vbox kernel: 10:31:35.081025 main     VBoxService 7.1.10 r169112 (verbosity: 0) linux.amd64 (Jun  3 2025 13:12:37) release log
+                             10:31:35.081029 main     Log opened 2026-06-21T10:31:35.081018000Z
+Jun 21 10:31:35 vbox kernel: 10:31:35.081301 main     OS Product: Linux
+Jun 21 10:31:35 vbox kernel: 10:31:35.081404 main     OS Release: 5.15.0-177-generic
+Jun 21 10:31:35 vbox kernel: 10:31:35.081480 main     OS Version: #187-Ubuntu SMP Sat Apr 11 22:54:33 UTC 2026
+Jun 21 10:31:35 vbox kernel: 10:31:35.081598 main     Executable: /opt/VBoxGuestAdditions-7.1.10/sbin/VBoxService
+                             10:31:35.081600 main     Process ID: 1035
+                             10:31:35.081600 main     Package type: LINUX_64BITS_GENERIC
+Jun 21 10:31:35 vbox kernel: 10:31:35.107970 main     7.1.10 r169112 started. Verbose level = 0
+Jun 21 10:31:35 vbox kernel: 10:31:35.203453 main     vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+Jun 21 10:31:35 vbox kernel: vboxsf: g_fHostFeatures=0x8000000f g_fSfFeatures=0x1 g_uSfLastFunction=29
+Jun 21 10:31:35 vbox kernel: vboxsf: Successfully loaded version 7.1.10 r169112 on 5.15.0-177-generic (LINUX_VERSION_CODE=0x50fc7)
+Jun 21 10:31:35 vbox kernel: 10:31:35.375183 automount vbsvcAutomounterMountIt: Successfully mounted 'Capturas' on '/mnt/capturas'
+Jun 21 11:17:49 vbox kernel: 11:17:49.313333 control  Session 0 is about to close ...
+Jun 21 11:17:49 vbox kernel: 11:17:49.314793 control  Stopping all guest processes ...
+Jun 21 11:17:49 vbox kernel: 11:17:49.315351 control  Closing all guest files ...
+Jun 21 11:17:49 vbox kernel: 11:17:49.315943 control  vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+Jun 21 15:38:44 vbox kernel: 15:38:44.986239 timesync vgsvcTimeSyncWorker: Radical host time change: 15 658 903 000 000ns (HostNow=1 782 056 324 966 000 000 ns HostLast=1 782 040 666 063 000 000 ns)
+Jun 21 15:38:54 vbox kernel: 15:38:54.991049 timesync vgsvcTimeSyncWorker: Radical guest time change: 15 659 215 652 000ns (GuestNow=1 782 056 334 990 990 000 ns GuestLast=1 782 040 675 775 338 000 ns fSetTimeLastLoop=true)
+Jun 21 15:51:51 vbox kernel: clocksource: Long readout interval, skipping watchdog check: cs_nsec: 1049336729 wd_nsec: 1049336498
+Jun 21 16:58:54 vbox systemd[1]: fwupd-refresh.service: Failed with result 'exit-code'.
+Jun 21 16:58:54 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+Jun 21 17:37:33 vbox systemd-resolved[591]: Using degraded feature set UDP instead of UDP+EDNS0 for DNS server 192.168.1.1.
+Jun 21 17:43:50 vbox kernel: 17:43:50.297029 control  Session 0 is about to close ...
+Jun 21 17:43:50 vbox kernel: 17:43:50.327460 control  Stopping all guest processes ...
+Jun 21 17:43:50 vbox kernel: 17:43:50.333416 control  Closing all guest files ...
+Jun 21 17:43:50 vbox kernel: 17:43:50.334008 control  vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+Jun 21 19:32:52 vbox kernel: 19:32:52.186958 timesync vgsvcTimeSyncWorker: Radical host time change: 6 545 662 000 000ns (HostNow=1 782 070 372 170 000 000 ns HostLast=1 782 063 826 508 000 000 ns)
+Jun 21 19:33:02 vbox kernel: 19:33:02.188387 timesync vgsvcTimeSyncWorker: Radical guest time change: 6 545 683 836 000ns (GuestNow=1 782 070 382 188 348 000 ns GuestLast=1 782 063 836 504 512 000 ns fSetTimeLastLoop=true)
+
+### Recent errors from systemd journal
+Mar 13 09:52:01 localhost.localdomain kernel: RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+Mar 13 09:52:01 localhost.localdomain kernel: [drm:vmw_host_printf [vmwgfx]] *ERROR* Failed to send host log message.
+Mar 13 09:52:04 localhost.localdomain systemd-udevd[431]: vboxguest: /etc/udev/rules.d/60-vboxadd.rules:1 Only network interfaces can be renamed, ignoring NAME="vboxguest".
+Mar 13 09:52:04 localhost.localdomain systemd-udevd[431]: vboxuser: /etc/udev/rules.d/60-vboxadd.rules:2 Only network interfaces can be renamed, ignoring NAME="vboxuser".
+Mar 13 09:54:29 vbox systemd-udevd[14340]: vboxguest: /etc/udev/rules.d/60-vboxadd.rules:1 Only network interfaces can be renamed, ignoring NAME="vboxguest".
+Mar 13 09:54:29 vbox systemd-udevd[14341]: vboxuser: /etc/udev/rules.d/60-vboxadd.rules:2 Only network interfaces can be renamed, ignoring NAME="vboxuser".
+Mar 13 11:09:53 vbox sudo[14786]:     vbox : 2 incorrect password attempts ; TTY=tty1 ; PWD=/home/vbox ; USER=root ; COMMAND=/usr/bin/apt install x11/.
+Mar 15 02:05:13 vbox sudo[26640]:     vbox : 3 incorrect password attempts ; TTY=tty1 ; PWD=/home/vbox ; USER=root ; COMMAND=/usr/sbin/dpkg-reconfigure keyboard-configuration
+Mar 15 02:05:39 vbox sudo[26641]:     vbox : 3 incorrect password attempts ; TTY=tty1 ; PWD=/home/vbox ; USER=root ; COMMAND=/usr/sbin/dpkg-reconfigure keyboard-configuration
+Apr 27 17:37:26 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+May 11 12:08:06 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+May 11 12:26:12 vbox systemd-udevd[91602]: vboxguest: /etc/udev/rules.d/60-vboxadd.rules:1 Only network interfaces can be renamed, ignoring NAME="vboxguest".
+May 11 12:26:12 vbox systemd-udevd[91602]: vboxuser: /etc/udev/rules.d/60-vboxadd.rules:2 Only network interfaces can be renamed, ignoring NAME="vboxuser".
+-- Boot 4b59618c271746bba99353e18f91ff0a --
+May 18 20:07:10 vbox kernel: RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+May 18 20:07:11 vbox kernel: [drm:vmw_host_printf [vmwgfx]] *ERROR* Failed to send host log message.
+May 18 20:07:18 vbox systemd-udevd[434]: vboxguest: /etc/udev/rules.d/60-vboxadd.rules:1 Only network interfaces can be renamed, ignoring NAME="vboxguest".
+May 18 20:07:18 vbox systemd-udevd[438]: vboxuser: /etc/udev/rules.d/60-vboxadd.rules:2 Only network interfaces can be renamed, ignoring NAME="vboxuser".
+May 18 20:09:18 vbox systemd-networkd-wait-online[531]: Timeout occurred while waiting for network connectivity.
+May 18 20:09:18 vbox systemd[1]: Failed to start Wait for Network to be Configured.
+May 18 20:29:38 vbox systemd-resolved[533]: Failed to save link data /run/systemd/resolve/netif/3: Permission denied
+May 18 20:29:38 vbox systemd-resolved[533]: Failed to save link data /run/systemd/resolve/netif/3: Permission denied
+-- Boot f0b1f68efc9a476fb6d0348401322a2c --
+May 19 13:53:22 vbox kernel: RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+May 19 13:53:22 vbox kernel: [drm:vmw_host_printf [vmwgfx]] *ERROR* Failed to send host log message.
+May 19 13:53:29 vbox systemd-udevd[448]: vboxuser: /etc/udev/rules.d/60-vboxadd.rules:2 Only network interfaces can be renamed, ignoring NAME="vboxuser".
+May 19 13:53:29 vbox systemd-udevd[439]: vboxguest: /etc/udev/rules.d/60-vboxadd.rules:1 Only network interfaces can be renamed, ignoring NAME="vboxguest".
+May 19 13:55:29 vbox systemd-networkd-wait-online[527]: Timeout occurred while waiting for network connectivity.
+May 19 13:55:29 vbox systemd[1]: Failed to start Wait for Network to be Configured.
+May 19 14:24:31 vbox systemd-networkd-wait-online[1160]: Timeout occurred while waiting for network connectivity.
+May 20 13:12:57 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+-- Boot 53b1ce143e504cf98efa99e3bb6c4bae --
+May 25 08:22:41 vbox kernel: RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+May 25 08:22:41 vbox kernel: [drm:vmw_host_printf [vmwgfx]] *ERROR* Failed to send host log message.
+May 25 08:22:50 vbox systemd-udevd[450]: vboxguest: /etc/udev/rules.d/60-vboxadd.rules:1 Only network interfaces can be renamed, ignoring NAME="vboxguest".
+May 25 08:22:50 vbox systemd-udevd[469]: vboxuser: /etc/udev/rules.d/60-vboxadd.rules:2 Only network interfaces can be renamed, ignoring NAME="vboxuser".
+May 25 08:24:50 vbox systemd-networkd-wait-online[593]: Timeout occurred while waiting for network connectivity.
+May 25 08:24:50 vbox systemd[1]: Failed to start Wait for Network to be Configured.
+May 25 18:30:59 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+-- Boot 158d0189b50c45ada3a4f060e9e57729 --
+May 26 16:47:50 vbox kernel: RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+May 26 16:47:50 vbox kernel: [drm:vmw_host_printf [vmwgfx]] *ERROR* Failed to send host log message.
+May 26 16:48:00 vbox systemd-udevd[478]: vboxuser: /etc/udev/rules.d/60-vboxadd.rules:2 Only network interfaces can be renamed, ignoring NAME="vboxuser".
+May 26 16:48:00 vbox systemd-udevd[446]: vboxguest: /etc/udev/rules.d/60-vboxadd.rules:1 Only network interfaces can be renamed, ignoring NAME="vboxguest".
+May 26 16:49:59 vbox systemd-networkd-wait-online[593]: Timeout occurred while waiting for network connectivity.
+May 26 16:49:59 vbox systemd[1]: Failed to start Wait for Network to be Configured.
+-- Boot 414ddf422c0f458ea2dd8df5dce41237 --
+Jun 18 15:40:46 vbox kernel: RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+Jun 18 15:40:47 vbox kernel: [drm:vmw_host_printf [vmwgfx]] *ERROR* Failed to send host log message.
+Jun 18 15:40:58 vbox systemd-udevd[452]: vboxguest: /etc/udev/rules.d/60-vboxadd.rules:1 Only network interfaces can be renamed, ignoring NAME="vboxguest".
+Jun 18 15:40:58 vbox systemd-udevd[465]: vboxuser: /etc/udev/rules.d/60-vboxadd.rules:2 Only network interfaces can be renamed, ignoring NAME="vboxuser".
+Jun 18 15:42:58 vbox systemd-networkd-wait-online[605]: Timeout occurred while waiting for network connectivity.
+Jun 18 15:42:58 vbox systemd[1]: Failed to start Wait for Network to be Configured.
+Jun 19 10:20:38 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+Jun 20 14:52:42 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+-- Boot 73aebcd5685d44d59796770dd1dbdeac --
+Jun 21 10:31:19 vbox kernel: RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+Jun 21 10:31:19 vbox kernel: [drm:vmw_host_printf [vmwgfx]] *ERROR* Failed to send host log message.
+Jun 21 10:31:25 vbox systemd-udevd[451]: vboxguest: /etc/udev/rules.d/60-vboxadd.rules:1 Only network interfaces can be renamed, ignoring NAME="vboxguest".
+Jun 21 10:31:25 vbox systemd-udevd[472]: vboxuser: /etc/udev/rules.d/60-vboxadd.rules:2 Only network interfaces can be renamed, ignoring NAME="vboxuser".
+Jun 21 16:58:54 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+
+### Warnings and errors from the current boot
+Jun 21 10:31:19 vbox kernel: RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+Jun 21 10:31:19 vbox kernel: APIC calibration not consistent with PM-Timer: 116ms instead of 100ms
+Jun 21 10:31:19 vbox kernel: acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+Jun 21 10:31:19 vbox kernel: device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+Jun 21 10:31:19 vbox kernel: [drm:vmw_host_printf [vmwgfx]] *ERROR* Failed to send host log message.
+Jun 21 10:31:19 vbox systemd[1]: Configuration file /run/systemd/system/netplan-ovs-cleanup.service is marked world-inaccessible. This has no effect as configuration data is accessible via APIs without restrictions. Proceeding anyway.
+Jun 21 10:31:19 vbox systemd[1]: /lib/systemd/system/snapd.service:23: Unknown key name 'RestartMode' in section 'Service', ignoring.
+Jun 21 10:31:24 vbox kernel: vboxguest: loading out-of-tree module taints kernel.
+Jun 21 10:31:24 vbox kernel: vgdrvHeartbeatInit: Setting up heartbeat to trigger every 2000 milliseconds
+Jun 21 10:31:24 vbox kernel: Host supports full mouse state reporting, switching to extended mouse integration protocol
+Jun 21 10:31:24 vbox kernel: vboxguest: Successfully loaded version 7.1.10 r169112
+Jun 21 10:31:24 vbox kernel: vboxguest: misc device minor 123, IRQ 20, I/O port d040, MMIO at 00000000f0400000 (size 0x400000)
+Jun 21 10:31:25 vbox systemd-udevd[451]: vboxguest: /etc/udev/rules.d/60-vboxadd.rules:1 Only network interfaces can be renamed, ignoring NAME="vboxguest".
+Jun 21 10:31:25 vbox systemd-udevd[472]: vboxuser: /etc/udev/rules.d/60-vboxadd.rules:2 Only network interfaces can be renamed, ignoring NAME="vboxuser".
+Jun 21 10:31:28 vbox /usr/sbin/irqbalance[678]: Balancing is ineffective on systems with a single cpu.  Shutting down
+Jun 21 10:31:29 vbox udisksd[687]: failed to load module mdraid: libbd_mdraid.so.2: cannot open shared object file: No such file or directory
+Jun 21 10:31:29 vbox udisksd[687]: Failed to load the 'mdraid' libblockdev plugin
+Jun 21 10:31:33 vbox kernel: kauditd_printk_skb: 29 callbacks suppressed
+Jun 21 10:31:35 vbox kernel: 10:31:35.081025 main     VBoxService 7.1.10 r169112 (verbosity: 0) linux.amd64 (Jun  3 2025 13:12:37) release log
+                             10:31:35.081029 main     Log opened 2026-06-21T10:31:35.081018000Z
+Jun 21 10:31:35 vbox kernel: 10:31:35.081301 main     OS Product: Linux
+Jun 21 10:31:35 vbox kernel: 10:31:35.081404 main     OS Release: 5.15.0-177-generic
+Jun 21 10:31:35 vbox kernel: 10:31:35.081480 main     OS Version: #187-Ubuntu SMP Sat Apr 11 22:54:33 UTC 2026
+Jun 21 10:31:35 vbox kernel: 10:31:35.081598 main     Executable: /opt/VBoxGuestAdditions-7.1.10/sbin/VBoxService
+                             10:31:35.081600 main     Process ID: 1035
+                             10:31:35.081600 main     Package type: LINUX_64BITS_GENERIC
+Jun 21 10:31:35 vbox kernel: 10:31:35.107970 main     7.1.10 r169112 started. Verbose level = 0
+Jun 21 10:31:35 vbox kernel: 10:31:35.203453 main     vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+Jun 21 10:31:35 vbox kernel: vboxsf: g_fHostFeatures=0x8000000f g_fSfFeatures=0x1 g_uSfLastFunction=29
+Jun 21 10:31:35 vbox kernel: vboxsf: Successfully loaded version 7.1.10 r169112 on 5.15.0-177-generic (LINUX_VERSION_CODE=0x50fc7)
+Jun 21 10:31:35 vbox kernel: 10:31:35.375183 automount vbsvcAutomounterMountIt: Successfully mounted 'Capturas' on '/mnt/capturas'
+Jun 21 11:17:49 vbox kernel: 11:17:49.313333 control  Session 0 is about to close ...
+Jun 21 11:17:49 vbox kernel: 11:17:49.314793 control  Stopping all guest processes ...
+Jun 21 11:17:49 vbox kernel: 11:17:49.315351 control  Closing all guest files ...
+Jun 21 11:17:49 vbox kernel: 11:17:49.315943 control  vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+Jun 21 15:38:44 vbox kernel: 15:38:44.986239 timesync vgsvcTimeSyncWorker: Radical host time change: 15 658 903 000 000ns (HostNow=1 782 056 324 966 000 000 ns HostLast=1 782 040 666 063 000 000 ns)
+Jun 21 15:38:54 vbox kernel: 15:38:54.991049 timesync vgsvcTimeSyncWorker: Radical guest time change: 15 659 215 652 000ns (GuestNow=1 782 056 334 990 990 000 ns GuestLast=1 782 040 675 775 338 000 ns fSetTimeLastLoop=true)
+Jun 21 15:51:51 vbox kernel: clocksource: Long readout interval, skipping watchdog check: cs_nsec: 1049336729 wd_nsec: 1049336498
+Jun 21 16:58:54 vbox systemd[1]: fwupd-refresh.service: Failed with result 'exit-code'.
+Jun 21 16:58:54 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+Jun 21 17:37:33 vbox systemd-resolved[591]: Using degraded feature set UDP instead of UDP+EDNS0 for DNS server 192.168.1.1.
+Jun 21 17:43:50 vbox kernel: 17:43:50.297029 control  Session 0 is about to close ...
+Jun 21 17:43:50 vbox kernel: 17:43:50.327460 control  Stopping all guest processes ...
+Jun 21 17:43:50 vbox kernel: 17:43:50.333416 control  Closing all guest files ...
+Jun 21 17:43:50 vbox kernel: 17:43:50.334008 control  vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+Jun 21 19:32:52 vbox kernel: 19:32:52.186958 timesync vgsvcTimeSyncWorker: Radical host time change: 6 545 662 000 000ns (HostNow=1 782 070 372 170 000 000 ns HostLast=1 782 063 826 508 000 000 ns)
+Jun 21 19:33:02 vbox kernel: 19:33:02.188387 timesync vgsvcTimeSyncWorker: Radical guest time change: 6 545 683 836 000ns (GuestNow=1 782 070 382 188 348 000 ns GuestLast=1 782 063 836 504 512 000 ns fSetTimeLastLoop=true)
+
+### Error/warning/failure keywords from /var/log/syslog
+Jun 19 10:20:38 vbox systemd[1]: fwupd-refresh.service: Main process exited, code=exited, status=1/FAILURE
+Jun 19 10:20:38 vbox systemd[1]: fwupd-refresh.service: Failed with result 'exit-code'.
+Jun 19 10:20:38 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+Jun 19 10:35:31 vbox python3[1415]: ["2026-06-19T10:35:31.577", "WARNING", "ubuntupro.apt", "fail", 933, "Failed to fetch ESM Apt Cache item: https://esm.ubuntu.com/apps/ubuntu/dists/jammy-apps-security/InRelease", {}]
+Jun 19 10:35:31 vbox python3[1415]: ["2026-06-19T10:35:31.652", "WARNING", "ubuntupro.apt", "fail", 933, "Failed to fetch ESM Apt Cache item: https://esm.ubuntu.com/apps/ubuntu/dists/jammy-apps-updates/InRelease", {}]
+Jun 19 10:35:32 vbox python3[1415]: ["2026-06-19T10:35:32.654", "WARNING", "ubuntupro.apt", "fail", 933, "Failed to fetch ESM Apt Cache item: https://esm.ubuntu.com/apps/ubuntu/dists/jammy-apps-security/InRelease", {}]
+Jun 19 10:35:32 vbox python3[1415]: ["2026-06-19T10:35:32.730", "WARNING", "ubuntupro.apt", "fail", 933, "Failed to fetch ESM Apt Cache item: https://esm.ubuntu.com/apps/ubuntu/dists/jammy-apps-updates/InRelease", {}]
+Jun 19 10:35:34 vbox python3[1415]: ["2026-06-19T10:35:34.723", "WARNING", "ubuntupro.apt", "fail", 933, "Failed to fetch ESM Apt Cache item: https://esm.ubuntu.com/apps/ubuntu/dists/jammy-apps-security/InRelease", {}]
+Jun 19 10:35:34 vbox python3[1415]: ["2026-06-19T10:35:34.798", "WARNING", "ubuntupro.apt", "fail", 933, "Failed to fetch ESM Apt Cache item: https://esm.ubuntu.com/apps/ubuntu/dists/jammy-apps-updates/InRelease", {}]
+Jun 19 10:35:38 vbox python3[1415]: ["2026-06-19T10:35:38.797", "WARNING", "ubuntupro.apt", "fail", 933, "Failed to fetch ESM Apt Cache item: https://esm.ubuntu.com/apps/ubuntu/dists/jammy-apps-security/InRelease", {}]
+Jun 19 10:35:38 vbox python3[1415]: ["2026-06-19T10:35:38.878", "WARNING", "ubuntupro.apt", "fail", 933, "Failed to fetch ESM Apt Cache item: https://esm.ubuntu.com/apps/ubuntu/dists/jammy-apps-updates/InRelease", {}]
+Jun 20 13:57:04 vbox snapd[683]: stateengine.go:161: state ensure error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 20 14:52:42 vbox systemd[1]: fwupd-refresh.service: Main process exited, code=exited, status=1/FAILURE
+Jun 20 14:52:42 vbox systemd[1]: fwupd-refresh.service: Failed with result 'exit-code'.
+Jun 20 14:52:42 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+Jun 21 10:19:49 vbox kernel: [21637.375095] vboxsf: SHFL_FN_MAP_FOLDER failed for 'Capturas': share not found
+Jun 21 10:20:33 vbox kernel: [21682.143793] vboxsf: SHFL_FN_MAP_FOLDER failed for 'Capturas': share not found
+Jun 21 10:21:47 vbox kernel: [21755.257302] vboxsf: SHFL_FN_MAP_FOLDER failed for 'Capturas': share not found
+Jun 21 10:23:35 vbox kernel: [21864.033130] vboxsf: SHFL_FN_MAP_FOLDER failed for 'Capturas': share not found
+Jun 21 10:31:28 vbox kernel: [    0.349417] RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+Jun 21 10:31:28 vbox kernel: [    6.583826] RAS: Correctable Errors collector initialized.
+Jun 21 10:31:28 vbox kernel: [    8.413565] [drm:vmw_host_printf [vmwgfx]] *ERROR* Failed to send host log message.
+Jun 21 10:31:28 vbox kernel: [   18.317073] vboxguest: module verification failed: signature and/or required key missing - tainting kernel
+Jun 21 10:31:28 vbox systemd[1]: Condition check resulted in Process error reports when automatic reporting is enabled (file watch) being skipped.
+Jun 21 10:31:28 vbox systemd[1]: Condition check resulted in Process error reports when automatic reporting is enabled (timer based) being skipped.
+Jun 21 10:31:28 vbox systemd[1]: Started Download data for packages that failed at package install time.
+Jun 21 10:31:28 vbox systemd[1]: Starting GRUB failed boot detection...
+Jun 21 10:31:28 vbox systemd[1]: Finished GRUB failed boot detection.
+Jun 21 10:31:29 vbox udisksd[687]: failed to load module mdraid: libbd_mdraid.so.2: cannot open shared object file: No such file or directory
+Jun 21 10:31:29 vbox udisksd[687]: Failed to load the 'mdraid' libblockdev plugin
+Jun 21 10:31:32 vbox snapd[684]: daemon.go:370: adjusting startup timeout by 45s (pessimistic estimate of 30s plus 5s per snap)
+Jun 21 10:32:06 vbox snapd[684]: stateengine.go:161: state ensure error: persistent network error: Get "https://api.snapcraft.io/api/v1/snaps/sections": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 10:36:33 vbox systemd[1]: Starting Download data for packages that failed at package install time...
+Jun 21 10:36:34 vbox systemd[1]: Finished Download data for packages that failed at package install time.
+Jun 21 10:42:06 vbox snapd[684]: autorefresh.go:640: Cannot prepare auto-refresh change due to a permanent network error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 10:42:06 vbox snapd[684]: stateengine.go:161: state ensure error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 11:02:06 vbox snapd[684]: autorefresh.go:640: Cannot prepare auto-refresh change due to a permanent network error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 11:02:06 vbox snapd[684]: stateengine.go:161: state ensure error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 15:42:55 vbox snapd[684]: autorefresh.go:640: Cannot prepare auto-refresh change due to a permanent network error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 15:43:27 vbox snapd[684]: stateengine.go:161: state ensure error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 16:07:55 vbox snapd[684]: autorefresh.go:640: Cannot prepare auto-refresh change due to a permanent network error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 16:07:55 vbox snapd[684]: stateengine.go:161: state ensure error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 16:32:55 vbox snapd[684]: autorefresh.go:640: Cannot prepare auto-refresh change due to a permanent network error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 16:32:55 vbox snapd[684]: stateengine.go:161: state ensure error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 16:52:55 vbox snapd[684]: autorefresh.go:640: Cannot prepare auto-refresh change due to a permanent network error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 16:52:55 vbox snapd[684]: stateengine.go:161: state ensure error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 16:58:54 vbox systemd[1]: fwupd-refresh.service: Main process exited, code=exited, status=1/FAILURE
+Jun 21 16:58:54 vbox systemd[1]: fwupd-refresh.service: Failed with result 'exit-code'.
+Jun 21 16:58:54 vbox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+Jun 21 17:17:55 vbox snapd[684]: autorefresh.go:640: Cannot prepare auto-refresh change due to a permanent network error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 17:17:55 vbox snapd[684]: stateengine.go:161: state ensure error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 17:37:54 vbox snapd[684]: autorefresh.go:640: Cannot prepare auto-refresh change due to a permanent network error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+Jun 21 17:37:54 vbox snapd[684]: stateengine.go:161: state ensure error: persistent network error: Post "https://api.snapcraft.io/v2/snaps/refresh": dial tcp: lookup api.snapcraft.io: Temporary failure in name resolution
+
+### Kernel warnings and errors from dmesg
+[Sun Jun 21 16:40:50 2026] RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+[Sun Jun 21 16:40:50 2026] APIC calibration not consistent with PM-Timer: 116ms instead of 100ms
+[Sun Jun 21 16:40:50 2026] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[Sun Jun 21 16:40:51 2026] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[Sun Jun 21 16:40:58 2026] [drm:vmw_host_printf [vmwgfx]] *ERROR* Failed to send host log message.
+[Sun Jun 21 16:41:02 2026] systemd[1]: Configuration file /run/systemd/system/netplan-ovs-cleanup.service is marked world-inaccessible. This has no effect as configuration data is accessible via APIs without restrictions. Proceeding anyway.
+[Sun Jun 21 16:41:03 2026] systemd[1]: /lib/systemd/system/snapd.service:23: Unknown key name 'RestartMode' in section 'Service', ignoring.
+[Sun Jun 21 16:41:08 2026] vboxguest: loading out-of-tree module taints kernel.
+[Sun Jun 21 16:41:08 2026] vgdrvHeartbeatInit: Setting up heartbeat to trigger every 2000 milliseconds
+[Sun Jun 21 16:41:08 2026] Host supports full mouse state reporting, switching to extended mouse integration protocol
+[Sun Jun 21 16:41:08 2026] vboxguest: Successfully loaded version 7.1.10 r169112
+[Sun Jun 21 16:41:08 2026] vboxguest: misc device minor 123, IRQ 20, I/O port d040, MMIO at 00000000f0400000 (size 0x400000)
+[Sun Jun 21 16:41:17 2026] kauditd_printk_skb: 29 callbacks suppressed
+[Sun Jun 21 16:41:19 2026] 10:31:35.081025 main     VBoxService 7.1.10 r169112 (verbosity: 0) linux.amd64 (Jun  3 2025 13:12:37) release log
+                           10:31:35.081029 main     Log opened 2026-06-21T10:31:35.081018000Z
+[Sun Jun 21 16:41:19 2026] 10:31:35.081301 main     OS Product: Linux
+[Sun Jun 21 16:41:19 2026] 10:31:35.081404 main     OS Release: 5.15.0-177-generic
+[Sun Jun 21 16:41:19 2026] 10:31:35.081480 main     OS Version: #187-Ubuntu SMP Sat Apr 11 22:54:33 UTC 2026
+[Sun Jun 21 16:41:19 2026] 10:31:35.081598 main     Executable: /opt/VBoxGuestAdditions-7.1.10/sbin/VBoxService
+                           10:31:35.081600 main     Process ID: 1035
+                           10:31:35.081600 main     Package type: LINUX_64BITS_GENERIC
+[Sun Jun 21 16:41:19 2026] 10:31:35.107970 main     7.1.10 r169112 started. Verbose level = 0
+[Sun Jun 21 16:41:19 2026] 10:31:35.203453 main     vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+[Sun Jun 21 16:41:19 2026] vboxsf: g_fHostFeatures=0x8000000f g_fSfFeatures=0x1 g_uSfLastFunction=29
+[Sun Jun 21 16:41:19 2026] vboxsf: Successfully loaded version 7.1.10 r169112 on 5.15.0-177-generic (LINUX_VERSION_CODE=0x50fc7)
+[Sun Jun 21 16:41:19 2026] 10:31:35.375183 automount vbsvcAutomounterMountIt: Successfully mounted 'Capturas' on '/mnt/capturas'
+[Sun Jun 21 17:27:32 2026] 11:17:49.313333 control  Session 0 is about to close ...
+[Sun Jun 21 17:27:32 2026] 11:17:49.314793 control  Stopping all guest processes ...
+[Sun Jun 21 17:27:32 2026] 11:17:49.315351 control  Closing all guest files ...
+[Sun Jun 21 17:27:32 2026] 11:17:49.315943 control  vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+[Sun Jun 21 17:27:38 2026] 15:38:44.986239 timesync vgsvcTimeSyncWorker: Radical host time change: 15 658 903 000 000ns (HostNow=1 782 056 324 966 000 000 ns HostLast=1 782 040 666 063 000 000 ns)
+[Sun Jun 21 17:27:48 2026] 15:38:54.991049 timesync vgsvcTimeSyncWorker: Radical guest time change: 15 659 215 652 000ns (GuestNow=1 782 056 334 990 990 000 ns GuestLast=1 782 040 675 775 338 000 ns fSetTimeLastLoop=true)
+[Sun Jun 21 17:40:45 2026] clocksource: Long readout interval, skipping watchdog check: cs_nsec: 1049336729 wd_nsec: 1049336498
+[Sun Jun 21 19:32:43 2026] 17:43:50.297029 control  Session 0 is about to close ...
+[Sun Jun 21 19:32:43 2026] 17:43:50.327460 control  Stopping all guest processes ...
+[Sun Jun 21 19:32:43 2026] 17:43:50.333416 control  Closing all guest files ...
+[Sun Jun 21 19:32:43 2026] 17:43:50.334008 control  vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+[Sun Jun 21 19:32:50 2026] 19:32:52.186958 timesync vgsvcTimeSyncWorker: Radical host time change: 6 545 662 000 000ns (HostNow=1 782 070 372 170 000 000 ns HostLast=1 782 063 826 508 000 000 ns)
+[Sun Jun 21 19:33:00 2026] 19:33:02.188387 timesync vgsvcTimeSyncWorker: Radical guest time change: 6 545 683 836 000ns (GuestNow=1 782 070 382 188 348 000 ns GuestLast=1 782 063 836 504 512 000 ns fSetTimeLastLoop=true)
+
+### Disk usage context
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           197M  1.1M  196M   1% /run
+/dev/sda2        25G  4.7G   19G  21% /
+tmpfs           982M     0  982M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+Capturas        465G  396G   69G  86% /mnt/capturas
+tmpfs           197M  8.0K  197M   1% /run/user/1000
+
+### Memory context
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       170Mi       1.4Gi       1.0Mi       332Mi       1.6Gi
+Swap:             0B          0B          0B
+
+====================================
+END OF MISSION 5.3
+====================================
