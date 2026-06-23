@@ -1,0 +1,41 @@
+====================================
+LAB 06 - MISSION 6.1 - PYTHON DEFENSIVE LAB INITIALIZATION
+Date:
+Mon Jun 22 09:23:14 AM UTC 2026
+====================================
+
+### Python version
+Python 3.10.12
+
+### Python path
+/usr/bin/python3
+
+### Lab 06 structure
+/home/vbox/lab06
+/home/vbox/lab06/scripts
+/home/vbox/lab06/scripts/lab06_mission_6_1_init.sh
+/home/vbox/lab06/reportes
+/home/vbox/lab06/evidencias
+/home/vbox/lab06/evidencias/lab06_01_environment_check.txt
+/home/vbox/lab06/Lab_06_Python_Defensivo_Log_Review.md
+
+### Lab 05 evidence files
+total 92K
+-rw-rw-r-- 1 vbox vbox  11K Jun 21 10:02 lab05_01_log_sources.txt
+-rw-rw-r-- 1 vbox vbox  28K Jun 21 11:00 lab05_02_auth_sudo_sessions.txt
+-rw-rw-r-- 1 vbox vbox  38K Jun 21 19:40 lab05_03_system_health_errors.txt
+-rw-rw-r-- 1 vbox vbox 4.9K Jun 22 07:41 lab05_04_mini_triage_soc.md
+-rw-rw-r-- 1 vbox vbox 2.6K Jun 22 08:03 lab05_05_final_closure_summary.md
+
+### Required Lab 05 evidence presence
+Found: /home/vbox/lab05/evidencias/lab05_02_auth_sudo_sessions.txt
+Found: /home/vbox/lab05/evidencias/lab05_03_system_health_errors.txt
+Found: /home/vbox/lab05/evidencias/lab05_04_mini_triage_soc.md
+Found: /home/vbox/lab05/evidencias/lab05_05_final_closure_summary.md
+
+### Lab 06 report
+-rw-rw-r-- 1 vbox vbox 1011 Jun 22 09:23 /home/vbox/lab06/Lab_06_Python_Defensivo_Log_Review.md
+
+====================================
+END OF MISSION 6.1
+====================================
