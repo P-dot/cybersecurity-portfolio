@@ -1,0 +1,79 @@
+﻿LAB 07 - MISSION 7.3 - WINDOWS SYSTEM/APPLICATION HEALTH REVIEW
+Evidence type: Sanitized Windows System/Application health review
+Collection time: 2026-06-27 16:16:41
+Scope: Windows System and Application logs, last 7 days
+Privacy note: raw messages, usernames, IP addresses, paths and command lines are not exported.
+Time window start: 2026-06-20 16:16:41
+
+### Event volume by log and severity - last 7 days, max 500 sampled per severity
+Log: System
+  Critical: 0
+  Error: 113
+  Warning: 84
+
+Log: Application
+  Critical: 0
+  Error: 0
+  Warning: 0
+
+### Top providers by log and severity - last 7 days
+Log: System
+  Severity: Critical
+    No sampled events.
+  Severity: Error
+    Provider: Service Control Manager | Count: 90
+    Provider: Microsoft-Windows-DistributedCOM | Count: 12
+    Provider: BTHUSB | Count: 11
+  Severity: Warning
+    Provider: Microsoft-Windows-DistributedCOM | Count: 36
+    Provider: Microsoft-Windows-DNS-Client | Count: 20
+    Provider: Microsoft-Windows-Time-Service | Count: 14
+    Provider: Netwtw06 | Count: 6
+    Provider: Microsoft-Windows-WLAN-AutoConfig | Count: 5
+    Provider: Tcpip | Count: 2
+    Provider: Microsoft-Windows-Kernel-Processor-Power | Count: 1
+
+Log: Application
+  Severity: Critical
+    No sampled events.
+  Severity: Error
+    No sampled events.
+  Severity: Warning
+    No sampled events.
+
+### Top event IDs by log and severity - last 7 days
+Log: System
+  Severity: Critical
+    No sampled events.
+  Severity: Error
+    Event ID: 7016 | Count: 77
+    Event ID: 17 | Count: 11
+    Event ID: 10005 | Count: 11
+    Event ID: 7000 | Count: 11
+    Event ID: 7031 | Count: 2
+    Event ID: 10010 | Count: 1
+  Severity: Warning
+    Event ID: 10016 | Count: 36
+    Event ID: 1014 | Count: 20
+    Event ID: 134 | Count: 14
+    Event ID: 6000 | Count: 6
+    Event ID: 4003 | Count: 3
+    Event ID: 10002 | Count: 2
+    Event ID: 4227 | Count: 2
+    Event ID: 37 | Count: 1
+
+Log: Application
+  Severity: Critical
+    No sampled events.
+  Severity: Error
+    No sampled events.
+  Severity: Warning
+    No sampled events.
+
+### Basic SOC triage interpretation
+System and Application logs provide operational health visibility for the Windows lab host.
+Critical, error and warning counts help prioritize analyst review but do not prove compromise by themselves.
+Provider and Event ID summaries help identify recurring operational issues without exporting raw messages or personal data.
+Recommended next action: combine authentication and system-health findings into a mini SOC triage summary.
+
+Mission 7.3 completed pending analyst review.

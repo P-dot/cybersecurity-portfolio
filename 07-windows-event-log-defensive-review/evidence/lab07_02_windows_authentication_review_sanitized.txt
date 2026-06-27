@@ -1,0 +1,29 @@
+﻿LAB 07 - MISSION 7.2 - WINDOWS AUTHENTICATION REVIEW
+Evidence type: Sanitized Windows authentication event review
+Collection time: 2026-06-25 17:19:28
+Scope: Windows Security log, last 7 days
+Privacy note: usernames, IP addresses, workstation names and raw messages are not exported.
+Time window start: 2026-06-18 17:19:28
+
+### Authentication Event IDs reviewed
+4624 - Successful logon
+4625 - Failed logon
+4634 - Logoff
+4648 - Explicit credentials used
+4672 - Special privileges assigned to new logon
+
+### Event ID counts - last 7 days, max 1000 each
+Event ID 4624 - Successful logon: 714
+Event ID 4625 - Failed logon: not available or no readable events
+Event ID 4634 - Logoff: 64
+Event ID 4648 - Explicit credentials used: 62
+Event ID 4672 - Special privileges assigned: 687
+
+### Basic SOC interpretation
+Authentication visibility is available through the Windows Security log.
+Successful logons, failed logons, logoffs, explicit credential use and privileged logons are reviewed as count-based indicators.
+Counts are triage indicators, not proof of compromise.
+No raw event messages or personal identifiers are exported.
+Recommended next action: review System and Application health events and prepare a short SOC triage summary.
+
+Mission 7.2 completed pending analyst review.

@@ -1,0 +1,73 @@
+﻿LAB 07 - MISSION 7.1 - WINDOWS EVENT LOG INVENTORY
+Evidence type: Sanitized Windows Event Log inventory
+Collection time: 2026-06-24 21:13:09
+Scope: Windows host used for defensive lab work
+Privacy note: raw messages, usernames, IP addresses, personal paths and command lines are not exported.
+
+### Sanitized system context
+OS caption: Microsoft Windows 10 Pro
+OS architecture: 64 bits
+Build number: 19045
+Host identifier: REDACTED_LAB_WINDOWS_HOST
+User identifier: REDACTED_LOCAL_USER
+
+### Target log availability and recent volume
+Log: Security
+  Available/readable: YES
+  Enabled: True
+  Total record count: 27518
+  Events sampled in last 7 days, max 1000: 1000
+
+Log: System
+  Available/readable: YES
+  Enabled: True
+  Total record count: 37133
+  Events sampled in last 7 days, max 1000: 746
+
+Log: Application
+  Available/readable: YES
+  Enabled: True
+  Total record count: 40890
+  Events sampled in last 7 days, max 1000: 927
+
+Log: Windows PowerShell
+  Available/readable: YES
+  Enabled: True
+  Total record count: 5387
+  Events sampled in last 7 days, max 1000: 208
+
+Log: Microsoft-Windows-PowerShell/Operational
+  Available/readable: YES
+  Enabled: True
+  Total record count: 1742
+  Events sampled in last 7 days, max 1000: 666
+
+### Security event ID quick count - last 7 days, max 500 each
+Event ID 4624 - Successful logon: 500
+Event ID 4625 - Failed logon: not available or no readable events
+Event ID 4634 - Logoff: 60
+Event ID 4648 - Explicit credentials used: 59
+Event ID 4672 - Special privileges assigned: 500
+Event ID 4688 - Process creation: not available or no readable events
+Event ID 4720 - User account created: not available or no readable events
+Event ID 4726 - User account deleted: not available or no readable events
+Event ID 4732 - Member added to local group: not available or no readable events
+Event ID 4738 - User account changed: not available or no readable events
+Event ID 4740 - User account locked out: not available or no readable events
+
+### System/Application health quick count - last 7 days, max 500 each
+Log: System
+  Critical: not available or no readable events
+  Error: 129
+  Warning: 106
+
+Log: Application
+  Critical: not available or no readable events
+  Error: not available or no readable events
+  Warning: 21
+
+### SOC interpretation
+This mission confirms which Windows Event Log sources are available for defensive review.
+The report exports counts and metadata only; raw event messages and personal identifiers are intentionally excluded.
+Event counts are triage indicators, not proof of compromise.
+Mission 7.1 completed pending analyst review.
