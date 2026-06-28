@@ -1,0 +1,113 @@
+﻿LAB 08 - MISSION 8.1 - NETWORK CONNECTIONS INVENTORY
+Evidence type: Sanitized Windows network connections inventory
+Collection time: 2026-06-28 17:25:04
+Scope: Local Windows host network visibility
+Privacy note: raw IP addresses, DNS names, usernames, process paths and command lines are not exported.
+Execution mode: read-only PowerShell evidence collection
+
+### Network adapters - sanitized summary
+Total adapters detected: 5
+Adapter status: Up | Count: 3
+Adapter status: Disconnected | Count: 2
+
+### IP configuration - sanitized summary
+IPv4 entries detected: 8
+IPv6 entries detected: 8
+IPv4 prefix length: /16 | Count: 5
+IPv4 prefix length: /8 | Count: 1
+IPv4 prefix length: /24 | Count: 1
+IPv4 prefix length: /20 | Count: 1
+
+### TCP connections - sanitized state summary
+Total TCP connection entries: 67
+TCP state: Listen | Count: 25
+TCP state: Bound | Count: 24
+TCP state: Established | Count: 14
+TCP state: CloseWait | Count: 3
+TCP state: TimeWait | Count: 1
+
+### TCP local ports - top sanitized summary
+Local TCP port: 22000 | Count: 4
+Local TCP port: 139 | Count: 3
+Local TCP port: 40956 | Count: 2
+Local TCP port: 40959 | Count: 2
+Local TCP port: 40958 | Count: 2
+Local TCP port: 40962 | Count: 2
+Local TCP port: 40963 | Count: 2
+Local TCP port: 40947 | Count: 2
+Local TCP port: 40741 | Count: 2
+Local TCP port: 40623 | Count: 2
+Local TCP port: 49678 | Count: 2
+Local TCP port: 40942 | Count: 2
+Local TCP port: 40940 | Count: 2
+Local TCP port: 40902 | Count: 2
+Local TCP port: 40966 | Count: 2
+
+### TCP owning processes - sanitized process-name summary
+Process name: svchost | TCP entries: 17
+Process name: SearchApp | TCP entries: 16
+Process name: syncthing | TCP entries: 7
+Process name: System | TCP entries: 5
+Process name: OneDrive.Sync.Service | TCP entries: 5
+Process name: MsMpEng | TCP entries: 4
+Process name: msedgewebview2 | TCP entries: 2
+Process name: wininit | TCP entries: 2
+Process name: spoolsv | TCP entries: 2
+Process name: services | TCP entries: 2
+Process name: lsass | TCP entries: 2
+Process name: TeamViewer_Service | TCP entries: 1
+Process name: Idle | TCP entries: 1
+Process name: jhi_service | TCP entries: 1
+
+### UDP endpoints - sanitized summary
+Total UDP endpoint entries: 53
+Local UDP port: 1900 | Count: 8
+Local UDP port: 5353 | Count: 5
+Local UDP port: 138 | Count: 3
+Local UDP port: 137 | Count: 3
+Local UDP port: 21027 | Count: 2
+Local UDP port: 5355 | Count: 2
+Local UDP port: 123 | Count: 2
+Local UDP port: 3702 | Count: 2
+Local UDP port: 4500 | Count: 2
+Local UDP port: 500 | Count: 2
+Local UDP port: 60648 | Count: 1
+Local UDP port: 61927 | Count: 1
+Local UDP port: 62766 | Count: 1
+Local UDP port: 62369 | Count: 1
+Local UDP port: 53 | Count: 1
+
+### UDP owning processes - sanitized process-name summary
+Process name: svchost | UDP entries: 36
+Process name: System | UDP entries: 6
+Process name: TeamViewer_Service | UDP entries: 5
+Process name: syncthing | UDP entries: 5
+Process name: msedgewebview2 | UDP entries: 1
+
+### Listening exposure - sanitized summary
+TCP listening entries: 25
+Listening TCP port: 139 | Count: 3
+Listening TCP port: 49664 | Count: 2
+Listening TCP port: 49665 | Count: 2
+Listening TCP port: 135 | Count: 2
+Listening TCP port: 49678 | Count: 2
+Listening TCP port: 49669 | Count: 2
+Listening TCP port: 49667 | Count: 2
+Listening TCP port: 49666 | Count: 2
+Listening TCP port: 5939 | Count: 1
+Listening TCP port: 8384 | Count: 1
+Listening TCP port: 42050 | Count: 1
+Listening TCP port: 5040 | Count: 1
+Listening TCP port: 5357 | Count: 1
+Listening TCP port: 22000 | Count: 1
+Listening TCP port: 49670 | Count: 1
+Listening TCP port: 445 | Count: 1
+
+### Basic SOC interpretation
+This evidence establishes local network visibility for the Windows lab host.
+The output is intentionally count-based and sanitized for public portfolio use.
+TCP states, local ports and owning process names help identify expected versus unusual network behavior.
+No raw remote IP addresses, DNS names, usernames, command lines or process paths are exported.
+Recommended next action: review listening ports and active connection patterns in Mission 8.2.
+
+Mission 8.1 completed pending analyst review.

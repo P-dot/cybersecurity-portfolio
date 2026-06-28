@@ -1,0 +1,69 @@
+﻿LAB 08 - MISSION 8.2 - LISTENING PORTS AND EXPOSURE REVIEW
+Evidence type: Sanitized Windows listening-port exposure review
+Collection time: 2026-06-28 17:31:51
+Scope: Local Windows host TCP listening ports
+Privacy note: raw IP addresses, DNS names, usernames, process paths and command lines are not exported.
+Execution mode: read-only PowerShell evidence collection
+
+### Network profile summary - sanitized
+Network category: Public | Count: 1
+
+### Listening TCP ports - sanitized classification
+Total listening TCP entries: 25
+
+Port: 135 | Binding: All interfaces | Process: svchost | Classification: Sensitive Windows service exposure - review network profile/firewall context | Action: Review
+Port: 135 | Binding: All interfaces | Process: svchost | Classification: Sensitive Windows service exposure - review network profile/firewall context | Action: Review
+Port: 139 | Binding: Specific local interface redacted | Process: System | Classification: Sensitive Windows service exposure - review network profile/firewall context | Action: Review
+Port: 139 | Binding: Specific local interface redacted | Process: System | Classification: Sensitive Windows service exposure - review network profile/firewall context | Action: Review
+Port: 139 | Binding: Specific local interface redacted | Process: System | Classification: Sensitive Windows service exposure - review network profile/firewall context | Action: Review
+Port: 445 | Binding: All interfaces | Process: System | Classification: Sensitive Windows service exposure - review network profile/firewall context | Action: Review
+Port: 5040 | Binding: All interfaces | Process: svchost | Classification: Windows connected devices/platform service - review if expected | Action: Document
+Port: 5357 | Binding: All interfaces | Process: System | Classification: Windows service discovery / device web services - review if needed | Action: Monitor
+Port: 5939 | Binding: Loopback only | Process: TeamViewer_Service | Classification: Remote access tool exposure - verify that this is expected and controlled | Action: Review
+Port: 8384 | Binding: Loopback only | Process: syncthing | Classification: File synchronization service exposure - verify intended use and access scope | Action: Review
+Port: 22000 | Binding: All interfaces | Process: syncthing | Classification: File synchronization service exposure - verify intended use and access scope | Action: Review
+Port: 42050 | Binding: Loopback only | Process: OneDrive.Sync.Service | Classification: Requires analyst context | Action: Document
+Port: 49664 | Binding: All interfaces | Process: lsass | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+Port: 49664 | Binding: All interfaces | Process: lsass | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+Port: 49665 | Binding: All interfaces | Process: wininit | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+Port: 49665 | Binding: All interfaces | Process: wininit | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+Port: 49666 | Binding: All interfaces | Process: svchost | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+Port: 49666 | Binding: All interfaces | Process: svchost | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+Port: 49667 | Binding: All interfaces | Process: svchost | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+Port: 49667 | Binding: All interfaces | Process: svchost | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+Port: 49669 | Binding: All interfaces | Process: spoolsv | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+Port: 49669 | Binding: All interfaces | Process: spoolsv | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+Port: 49670 | Binding: Loopback only | Process: jhi_service | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+Port: 49678 | Binding: All interfaces | Process: services | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+Port: 49678 | Binding: All interfaces | Process: services | Classification: Dynamic/high Windows port - usually contextual, monitor if recurring | Action: Monitor
+
+### Exposure summary by analyst action
+Action: Monitor | Count: 14
+Action: Review | Count: 9
+Action: Document | Count: 2
+
+### Exposure summary by binding scope
+Binding scope: All interfaces | Count: 18
+Binding scope: Loopback only | Count: 4
+Binding scope: Specific local interface redacted | Count: 3
+
+### Exposure summary by process
+Process: svchost | Listening entries: 7
+Process: System | Listening entries: 5
+Process: syncthing | Listening entries: 2
+Process: lsass | Listening entries: 2
+Process: wininit | Listening entries: 2
+Process: services | Listening entries: 2
+Process: spoolsv | Listening entries: 2
+Process: TeamViewer_Service | Listening entries: 1
+Process: OneDrive.Sync.Service | Listening entries: 1
+Process: jhi_service | Listening entries: 1
+
+### Basic SOC interpretation
+Listening ports represent local exposure points and should be reviewed in context.
+Windows service ports such as RPC/SMB may be expected, but should be checked against the active network profile and firewall posture.
+Remote-access and synchronization services require stronger analyst attention because they can expand exposure if misconfigured.
+Dynamic high ports are common on Windows but should be monitored when persistent or linked to unexpected processes.
+No raw IP addresses, DNS names, command lines, usernames or process paths are exported.
+
+Mission 8.2 completed pending analyst review.

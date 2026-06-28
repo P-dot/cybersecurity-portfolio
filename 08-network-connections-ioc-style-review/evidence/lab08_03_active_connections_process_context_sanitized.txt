@@ -1,0 +1,51 @@
+﻿LAB 08 - MISSION 8.3 - ACTIVE CONNECTIONS AND PROCESS CONTEXT REVIEW
+Evidence type: Sanitized Windows active TCP connection and process-context review
+Collection time: 2026-06-28 17:36:48
+Scope: Local Windows host active TCP connections
+Privacy note: raw remote IP addresses, DNS names, usernames, process paths and command lines are not exported.
+Execution mode: read-only PowerShell evidence collection
+
+### Active TCP connection state summary
+Total active TCP entries reviewed: 7
+TCP state: Established | Count: 6
+TCP state: CloseWait | Count: 1
+
+### Active TCP connections - sanitized classification
+State: Established | Process: syncthing | Process category: Synchronization service | Remote port: 22067 | Remote port category: Other remote service - requires context | Action: Document
+State: Established | Process: msedgewebview2 | Process category: User/web-facing application | Remote port: 443 | Remote port category: HTTPS / encrypted web or API traffic | Action: Monitor
+State: Established | Process: svchost | Process category: Windows system component | Remote port: 443 | Remote port category: HTTPS / encrypted web or API traffic | Action: Monitor
+State: Established | Process: syncthing | Process category: Synchronization service | Remote port: 22000 | Remote port category: Syncthing synchronization | Action: Monitor
+State: Established | Process: syncthing | Process category: Synchronization service | Remote port: 50870 | Remote port category: Dynamic/high remote port | Action: Monitor
+State: Established | Process: syncthing | Process category: Synchronization service | Remote port: 50872 | Remote port category: Dynamic/high remote port | Action: Monitor
+State: CloseWait | Process: SearchApp | Process category: User/web-facing application | Remote port: 443 | Remote port category: HTTPS / encrypted web or API traffic | Action: Review
+
+### Summary by analyst action
+Action: Monitor | Count: 5
+Action: Document | Count: 1
+Action: Review | Count: 1
+
+### Summary by process
+Process: syncthing | Active TCP entries: 4
+Process: svchost | Active TCP entries: 1
+Process: msedgewebview2 | Active TCP entries: 1
+Process: SearchApp | Active TCP entries: 1
+
+### Summary by process category
+Process category: Synchronization service | Count: 4
+Process category: User/web-facing application | Count: 2
+Process category: Windows system component | Count: 1
+
+### Summary by remote port category
+Remote port category: HTTPS / encrypted web or API traffic | Count: 3
+Remote port category: Dynamic/high remote port | Count: 2
+Remote port category: Syncthing synchronization | Count: 1
+Remote port category: Other remote service - requires context | Count: 1
+
+### Basic SOC interpretation
+Active TCP connections show current network activity linked to process names and remote service ports.
+The evidence is intentionally sanitized: remote IPs, DNS names, usernames, command lines and process paths are not exported.
+Established HTTPS traffic from user-facing or synchronization applications can be expected, but must be interpreted in context.
+CloseWait states, unknown process context, remote-access tooling or cleartext HTTP should receive stronger analyst attention.
+Recommended next action: consolidate Lab 08 findings into an IOC-style mini triage summary.
+
+Mission 8.3 completed pending analyst review.
