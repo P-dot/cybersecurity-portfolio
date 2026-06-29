@@ -50,7 +50,8 @@ El trabajo documentado en este repositorio sigue una lógica de operación defen
 | 05 — Linux Log Monitoring SOC Triage | Logs Linux / SOC | Revisión de auth.log, syslog, journalctl, sudo/sesiones, servicios fallidos, severidad y acción recomendada |
 | 06 — Defensive Python Log Review & SOC Reporting | Python defensivo / reporting SOC | Lectura de evidencias Linux, extracción de eventos, reducción de ruido, generación de reportes y clasificación inicial de acciones de analista |
 | 07 — Windows Event Log Defensive Review | Windows logs / SOC | Revisión saneada de Security, System, Application y PowerShell logs, autenticación, errores/warnings operativos y mini triage SOC |
-| 08 — Network Connections & IOC-style Review | Windows networking / SOC | Revisión defensiva de conexiones TCP/UDP, puertos en escucha, procesos asociados, exposición local y mini triage IOC-style con evidencias saneadas |
+| 08 — Network Connections & IOC-style Review | Windows networking / SOC | Revisión defensiva de conexiones TCP/UDP, puertos en escucha, procesos asociados, exposición local y mini triage IOC-style con evidencias saneadas 
+| 09 — Vulnerability & Exposure Management Triage | Vulnerability Management / SecOps | Revisión defensiva de baseline Windows, postura de parches, servicios locales, exposición, clasificación de riesgo y plan de remediación con registro de riesgos |
 ---
 
 ## Evidencias y documentación
